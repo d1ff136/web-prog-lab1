@@ -1,0 +1,281 @@
+HTTP/1.0 200 OK
+Server: BaseHTTP/0.6 Python/3.14.7
+Date: Mon, 14 Sep 2026 22:54:02 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 1074
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Головна - Простий вебзастосунок</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/">Головна</a>
+      <a href="/about">Про роботу</a>
+    </nav>
+  </header>
+  <main>
+    <h1>Простий вебзастосунок</h1>
+    <div class="card">
+      <p>Це головна сторінка лабораторної роботи №1 «Реалізація простого вебзастосунку».</p>
+      <p>Сервер обробляє HTTP-запити без використання фреймворків, читає HTML/CSS-файли з диску та повертає їх клієнту з явно заданими статусами й заголовками.</p>
+    </div>
+  </main>
+  <footer>
+    Могилін Владислав Олександрович - Група 6.1224 - Стек: Python - Версія середовища: Python 3.12.11
+  </footer>
+</body>
+</html>
+HTTP/1.0 200 OK
+Server: BaseHTTP/0.6 Python/3.14.7
+Date: Mon, 14 Sep 2026 22:54:03 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 1745
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Про роботу — Простий вебзастосунок</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/">Головна</a>
+      <a href="/about">Про роботу</a>
+    </nav>
+  </header>
+  <main>
+    <h1>Про роботу</h1>
+    <div class="card">
+      <p><strong>Опис реалізації:</strong> сервер написано на Python з використанням лише вбудованих модулів
+      http.server та pathlib, без фреймворків та сторонніх бібліотек.</p>
+      <p>Запит обробляється так: сервер отримує шлях запиту, відкидає рядок параметрів (query string),
+      зіставляє шлях із таблицею маршрутів i зчитує відповідний HTML- або CSS-файл із каталогу
+      public/ за допомогою read_text. Якщо шлях не входить у таблицю маршрутів,
+      сервер повертає сторінку 404.html зі статусом 404, без перенаправлення — адреса в
+      браузері лишається незмінною.</p>
+      <p>Content-Type задається явно: text/html; charset=utf-8 для HTML-сторінок та
+      text/css; charset=utf-8 для файлу стилів.</p>
+    </div>
+  </main>
+  <footer>
+    Могилін Владислав Олександрович - Група 6.1224 - Стек: Python - Версія середовища: Python 3.12.11
+  </footer>
+</body>
+</html>
+HTTP/1.0 200 OK
+Server: BaseHTTP/0.6 Python/3.14.7
+Date: Mon, 14 Sep 2026 22:54:03 GMT
+Content-Type: text/css; charset=utf-8
+Content-Length: 914
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background-color: #f7f7f9;
+  color: #1f2328;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #1f2937;
+  padding: 1rem 2rem;
+}
+
+nav a {
+  color: #e5e7eb;
+  text-decoration: none;
+  margin-right: 1.5rem;
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: #60a5fa;
+}
+
+main {
+  max-width: 720px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+h1 {
+  color: #111827;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-top: 1rem;
+}
+
+footer {
+  max-width: 720px;
+  margin: 2rem auto;
+  padding: 1rem 1.5rem;
+  font-size: 0.85rem;
+  color: #6b7280;
+  border-top: 1px solid #e5e7eb;
+}
+
+.error-code {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #dc2626;
+  margin: 0;
+}
+
+a.home-link {
+  color: #2563eb;
+  font-weight: 600;
+}
+HTTP/1.0 404 Not Found
+Server: BaseHTTP/0.6 Python/3.14.7
+Date: Mon, 14 Sep 2026 22:54:03 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 870
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Сторінку не знайдено - Простий вебзастосунок</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/">Головна</a>
+      <a href="/about">Про роботу</a>
+    </nav>
+  </header>
+  <main>
+    <p class="error-code">404</p>
+    <h1>Сторінку не знайдено</h1>
+    <div class="card">
+      <p>Запитаний ресурс не існує на цьому сервері.</p>
+      <p><a class="home-link" href="/">Повернутись на головну</a></p>
+    </div>
+  </main>
+  <footer>
+    Могилін Владислав Олександрович - Група 6.1224 - Стек: Python - Версія середовища: Python 3.12.11
+  </footer>
+</body>
+</html>
+HTTP/1.0 404 Not Found
+Server: BaseHTTP/0.6 Python/3.14.7
+Date: Mon, 14 Sep 2026 22:54:04 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 870
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Сторінку не знайдено - Простий вебзастосунок</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/">Головна</a>
+      <a href="/about">Про роботу</a>
+    </nav>
+  </header>
+  <main>
+    <p class="error-code">404</p>
+    <h1>Сторінку не знайдено</h1>
+    <div class="card">
+      <p>Запитаний ресурс не існує на цьому сервері.</p>
+      <p><a class="home-link" href="/">Повернутись на головну</a></p>
+    </div>
+  </main>
+  <footer>
+    Могилін Владислав Олександрович - Група 6.1224 - Стек: Python - Версія середовища: Python 3.12.11
+  </footer>
+</body>
+</html>
+HTTP/1.0 404 Not Found
+Server: BaseHTTP/0.6 Python/3.14.7
+Date: Mon, 14 Sep 2026 22:54:06 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 870
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Сторінку не знайдено - Простий вебзастосунок</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/">Головна</a>
+      <a href="/about">Про роботу</a>
+    </nav>
+  </header>
+  <main>
+    <p class="error-code">404</p>
+    <h1>Сторінку не знайдено</h1>
+    <div class="card">
+      <p>Запитаний ресурс не існує на цьому сервері.</p>
+      <p><a class="home-link" href="/">Повернутись на головну</a></p>
+    </div>
+  </main>
+  <footer>
+    Могилін Владислав Олександрович - Група 6.1224 - Стек: Python - Версія середовища: Python 3.12.11
+  </footer>
+</body>
+</html>
+HTTP/1.0 200 OK
+Server: BaseHTTP/0.6 Python/3.14.7
+Date: Mon, 14 Sep 2026 22:56:24 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 1745
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Про роботу — Простий вебзастосунок</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/">Головна</a>
+      <a href="/about">Про роботу</a>
+    </nav>
+  </header>
+  <main>
+    <h1>Про роботу</h1>
+    <div class="card">
+      <p><strong>Опис реалізації:</strong> сервер написано на Python з використанням лише вбудованих модулів
+      http.server та pathlib, без фреймворків та сторонніх бібліотек.</p>
+      <p>Запит обробляється так: сервер отримує шлях запиту, відкидає рядок параметрів (query string),
+      зіставляє шлях із таблицею маршрутів i зчитує відповідний HTML- або CSS-файл із каталогу
+      public/ за допомогою read_text. Якщо шлях не входить у таблицю маршрутів,
+      сервер повертає сторінку 404.html зі статусом 404, без перенаправлення — адреса в
+      браузері лишається незмінною.</p>
+      <p>Content-Type задається явно: text/html; charset=utf-8 для HTML-сторінок та
+      text/css; charset=utf-8 для файлу стилів.</p>
+    </div>
+  </main>
+  <footer>
+    Могилін Владислав Олександрович - Група 6.1224 - Стек: Python - Версія середовища: Python 3.12.11
+  </footer>
+</body>
+</html>
